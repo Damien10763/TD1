@@ -1,36 +1,35 @@
-# TD1
-# Test cours
-Git, C# Et introduction à Unity
+using System;
 
+class Program
+{
+    static void Main()
+    {
+        // --- Exercice 1 : Afficher les premiers n nombres naturels et leur somme ---
+        Console.WriteLine("=== Premiers n nombres naturels et leur somme ===");
+        Console.Write("Entrez une valeur pour n : ");
+        int n = int.Parse(Console.ReadLine());  // Lire n au clavier
 
-  int i = 10, j = 20;
-
-  if (i == j)
+        int somme = 0;
+        Console.WriteLine("Les premiers {0} nombres naturels sont :", n);
+        for (int i = 1; i <= n; i++)
         {
-            Console.WriteLine("i is equal to j");
+            Console.Write(i + " ");
+            somme += i;
         }
-        else if (i > j)
-        {
-            Console.WriteLine("i is greater than j");
-        }
-        else if (i < j)
-        {
-            Console.WriteLine("i is less than j");
-        }
+        Console.WriteLine("\nLa somme est : " + somme);
 
-  int x = 10;
+        Console.WriteLine("\n-----------------------------------------\n");
 
-  switch (x)
+        // --- Exercice 2 : Factorielle d'un entier ---
+        Console.WriteLine("=== Factorielle d'un nombre ===");
+        Console.Write("Entrez un nombre entier : ");
+        int nombre = int.Parse(Console.ReadLine());  // Lire le nombre au clavier
+
+        long factorielle = 1;
+        for (int i = 1; i <= nombre; i++)
         {
-            case 5:
-                Console.WriteLine("Value of x is 5");
-                break;
-            case 10:
-                Console.WriteLine("Value of x is 10");
-                break;
-            case 15:
-                Console.WriteLine("Value of x is 15");
-                break;
-            default:
-                Console.WriteLine("Unknown value");
-                break;
+            factorielle *= i;
+        }
+        Console.WriteLine("La factorielle de " + nombre + " est : " + factorielle);
+    }
+}
